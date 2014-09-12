@@ -1,0 +1,466 @@
+/*-----------------------------------*\
+  $RESET
+\*-----------------------------------*/
+
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input, select, button, textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  font: inherit;
+  font-size: 16px !important;
+  color: inherit;
+}
+
+/*-----------------------------------*\
+  $OBJECTS
+\*-----------------------------------*/
+
+.butt, .input {
+  padding: .75rem;
+  margin: .375rem;
+  background-color: transparent;
+}
+
+  .butt:focus, .input:focus {
+    outline: none;
+  }
+
+.butt {
+  border: 0;
+  line-height: 1.375;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  font-weight: 700;
+
+  color: #f35626;
+
+  cursor: pointer;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+.button-animate-it-green{
+	padding: 15px 20px;
+	background: #48b500;
+	border:0;
+	box-shadow: none;
+	color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.button-animate-it-green:hover {
+    background: none repeat scroll 0% 0% rgb(86, 215, 0);
+}
+
+.button-animate-it-cancel{
+	padding: 15px 20px;
+	background: #696969;
+	border:0;
+	box-shadow: none;
+	color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.button-animate-it-cancel:hover {
+    background: #969696;
+}
+
+  .butt--primary {
+    background-color: #f35626;
+    color: #fff;
+  }
+
+.input {
+  border: 1px solid #c0c8c9;
+}
+
+  .input--dropdown {
+    background-image: url("images/ddown.png");
+    background-image: url("images/ddown.svg?3"), none;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1rem;
+    background-position: right center;
+  }
+
+/*-----------------------------------*\
+  $TYPOGRAPHY
+\*-----------------------------------*/
+
+h1, .alpha {
+  margin-bottom: 1.5rem;
+
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+h2, .beta {
+  margin-bottom: .75rem;
+
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+@media (min-width: 650px) {
+  .mega {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+.subhead, .meta {
+  color: #7b8993;
+}
+
+.promo {
+  text-align: center;
+}
+
+p, hr, form {
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  border: none;
+  margin-top: -1px;
+  height: 1px;
+  background-color: #c0c8c9;
+  background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+  a:hover {
+    color: #f35626;
+  }
+
+/*-----------------------------------*\
+  $LAYOUT
+\*-----------------------------------*/
+
+.wrap {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.island {
+  padding: 1.5rem;
+}
+
+.isle {
+  padding: .75rem;
+}
+
+.spit {
+  padding: .375rem;
+}
+
+/*-----------------------------------*\
+  $BASE
+\*-----------------------------------*/
+
+html {
+  font: 100%/1.5 "Roboto", Verdana, sans-serif !important;
+  color: #3d464d;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+
+  overflow: hidden-x;
+
+  /* Centering in The Unknown */
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  html {
+    height: 100%;
+  }
+
+  html:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  body {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 38rem;
+  }
+}
+
+/*-----------------------------------*\
+  $HEADER
+\*-----------------------------------*/
+
+.site__header {
+  -webkit-animation: bounceInUp 1s;
+}
+
+  .site__title {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+  }
+
+.site__content {
+  -webkit-animation: bounceInUp 1s;
+  -webkit-animation-delay: .1s;
+}
+
+  .site__content form {
+    -webkit-animation: bounceInUp 1s;
+    -webkit-animation-delay: .1s;
+  }
+
+.button-animate-it{
+	font-family: 'Glegoo','Helvetica',arial,serif !important;
+	padding: 15px 20px;
+	background: #ff2e01;
+	border:0;
+	box-shadow: none;
+	color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.button-animate-it:hover{
+	background: #ff6341;
+}
+
+.animateit-icon{
+	background: url("../images/badge.png") no-repeat scroll center center;
+	max-width: 172px;
+	height: 172px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+  
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+.bootstrap-switch {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #cccccc;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  line-height: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  min-width: 100px;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  margin-left: 5px;
+}
+.bootstrap-switch.bootstrap-switch-mini {
+  min-width: 71px;
+}
+
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 10px;
+  line-height: 9px;
+}
+.bootstrap-switch.bootstrap-switch-small {
+  min-width: 79px;
+}
+.bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-small .bootstrap-switch-label {
+  padding-bottom: 3px;
+  padding-top: 3px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.bootstrap-switch.bootstrap-switch-large {
+  min-width: 120px;
+}
+.bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-large .bootstrap-switch-label {
+  padding-bottom: 9px;
+  padding-top: 9px;
+  font-size: 16px;
+  line-height: normal;
+}
+.bootstrap-switch.bootstrap-switch-animate .bootstrap-switch-container {
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
+}
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-container {
+  margin-left: 0%;
+}
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-container {
+  margin-left: -50%;
+}
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-container {
+  margin-left: -25%;
+}
+.bootstrap-switch.bootstrap-switch-disabled,
+.bootstrap-switch.bootstrap-switch-readonly,
+.bootstrap-switch.bootstrap-switch-indeterminate {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default !important;
+}
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-label {
+  cursor: default !important;
+}
+.bootstrap-switch.bootstrap-switch-focused {
+
+}
+.bootstrap-switch .bootstrap-switch-container {
+  display: inline-block;
+  width: 150%;
+  top: 0;
+  border-radius: 4px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-handle-off,
+.bootstrap-switch .bootstrap-switch-label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block !important;
+  height: 100%;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-handle-off {
+  text-align: center;
+  z-index: 1;
+  width: 33.333333333%;
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  color: #fff;
+  background: #ff2e01;
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info {
+  color: #fff;
+  background: #5bc0de;
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
+  color: #fff;
+  background: #5cb85c;
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning {
+  background: #f0ad4e;
+  color: #fff;
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger {
+  color: #fff;
+  background: #d9534f;
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
+  color: #000;
+  background: #eeeeee;
+}
+.bootstrap-switch .bootstrap-switch-handle-on {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.bootstrap-switch .bootstrap-switch-handle-off {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.bootstrap-switch .bootstrap-switch-label {
+  text-align: center;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  z-index: 100;
+  width: 33.333333333%;
+  color: #333333;
+  background: #ffffff;
+}
+.bootstrap-switch input[type='radio'],
+.bootstrap-switch input[type='checkbox'] {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: -1;
+}
+.bootstrap-switch input[type='radio'].form-control,
+.bootstrap-switch input[type='checkbox'].form-control {
+  height: auto;
+}
