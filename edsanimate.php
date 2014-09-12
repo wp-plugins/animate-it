@@ -4,7 +4,7 @@
  * Plugin URI: http://www.eleopard.in
  * Description: It will allow user to add CSS Animations
  * Version: 1.0
- * Author: eLEOPARD Design Studios Pvt Ltd.
+ * Author: eLEOPARD Design Studios
  * Author URI: http://www.eleopard.in
  * License: GNU General Public License version 2 or later; see LICENSE.txt
  *  http://www.gnu.org/copyleft/gpl.html GNU/GPL
