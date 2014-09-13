@@ -14,11 +14,12 @@ Animate It! is a WordPress Plugin designed and developed to provide an efficient
 
 Some of the Key features Include:
 
-*	Allowing user to apply CSS3 animations on WordPress Posts and Text Widgets
-*   Capability to apply animation on Scroll
-*   Provide special CSS delay classes to create a nice animation sequence with multiple text widgets and posts
-*   Provide special CSS delay classes to create a nice animation sequence with multiple text widgets and posts
-*   And a lot more!
+* Allowing user to apply CSS3 animations on WordPress Posts and Text Widgets
+* Capability to apply animation on Scroll
+* Provide special CSS delay classes to create a nice animation sequence with multiple text widgets and posts
+* Provide special CSS delay classes to create a nice animation sequence with multiple text widgets and posts
+* And a lot more!
+
 
 All the CSS3 animations are from Animate.css.
 
@@ -37,7 +38,6 @@ Alternatively:
 3. Click install Animate It!
 4. Activate through the Plugins menu in WordPress or when asked during installation
 5. Set your options from the Settings -> Animate It! admin area
-
 
 == Frequently Asked Questions ==
 = Setting the scroll offset for on scroll functionality? =
