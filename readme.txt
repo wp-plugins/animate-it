@@ -1,5 +1,5 @@
 === Animate It! ===
-Contributors: Eleopard Design Studios Pvt. Ltd.
+Contributors: eleopard
 Tags: css3 animation, animate.css, jquery, on scroll animation, delay animation
 Requires at least: 2.7
 Tested up to: 4.0
