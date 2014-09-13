@@ -7,7 +7,7 @@ Stable tag: 1.0
 License: GNU General Public License version 2 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
 
-Animate It! is a WordPress Plugin designed and developed to provide an efficient and user friendly solution to apply beautiful CSS3 animations on WordPress Posts and Text Widgets.
+Animate It! is a WordPress Plugin designed and developed to provide an efficient and user friendly solution to apply beautiful CSS3 animations.
 
 == Description ==
 Animate It! is a WordPress Plugin designed and developed to provide an efficient and user friendly solution to apply beautiful CSS3 animations on WordPress Posts and Text Widgets.
