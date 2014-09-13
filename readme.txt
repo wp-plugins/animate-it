@@ -12,6 +12,10 @@ Animate It! is a WordPress Plugin designed and developed to provide an efficient
 == Description ==
 Animate It! is a WordPress Plugin designed and developed to provide an efficient and user friendly solution to apply beautiful CSS3 animations on WordPress Posts and Text Widgets.
 
+
+
+[youtube https://www.youtube.com/watch?v=Np_t43pfrh4]
+
 Some of the Key features Include:
 
 * Allowing user to apply CSS3 animations on WordPress Posts and Text Widgets
