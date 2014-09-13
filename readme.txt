@@ -32,12 +32,12 @@ All the CSS3 animations are from Animate.css.
 3. Set your options from the Settings -> Animate It! admin area.
 
 Alternatively:
+
 1. Login to your WordPress admin area
 2. Search for Animate It!
 3. Click install Animate It!
 4. Activate through the Plugins menu in WordPress or when asked during installation
 5. Set your options from the Settings -> Animate It! admin area
-
 
 == Frequently Asked Questions ==
 = Setting the scroll offset for on scroll functionality? =
