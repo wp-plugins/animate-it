@@ -22,12 +22,12 @@ Some of the Key features Include:
 * Capability to apply animation on Scroll
 * Provide special CSS delay classes to create a nice animation sequence with multiple text widgets and posts
 * Provide special CSS delay classes to create a nice animation sequence with multiple text widgets and posts
-* And a lot more!
+
 
 
 All the CSS3 animations are from Animate.css.
 
-[Demo](http://downloads.eleopard.in/animate-it-demo-wordpress/ "Demo") | [Support](http://downloads.eleopard.in/animate-it-support-wordpress/ "Support")
+[Demo](http://downloads.eleopard.in/animate-it-demo-wordpress "Demo") | [Support](http://downloads.eleopard.in/animate-it-support-wordpress "Support") | [Documentation](http://downloads.eleopard.in/animate-it-documentation-wordpress "Documentation")
 
 
 == Installation ==
