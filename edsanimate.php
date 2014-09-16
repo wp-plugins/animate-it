@@ -28,7 +28,7 @@
 */
 
 
-require_once 'assets/helper/Mobile_Detect.php';
+include_once 'assets/helper/Mobile_Detect.php';
 include_once 'eds_tinymce.php';
 
 
