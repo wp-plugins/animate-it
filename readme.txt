@@ -54,11 +54,12 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 
 == Changelog ==
-= Version 1.0 =
-* Initial public release.
 
 = Version 1.1 =
 * New options added under Settings-> Animate It! to enable or disable animations on Smartphones and Tablets.
+
+= Version 1.0 =
+* Initial public release.
 
 == Upgrade Notice ==
 
