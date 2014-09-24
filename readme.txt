@@ -47,6 +47,7 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 == Screenshots ==
 
+
 1. **Animate Button** - Add animation blocks in WordPress Post and Pages using the Animate It! button.
 2. **Select Animation** - After clicking Animate It! button you will get a screen to choose animation.
 3. **Animation Block** - Update the content of the block as per your requirement. You can copy and paste the same in Text Widget also.
