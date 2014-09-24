@@ -27,8 +27,9 @@
 */
 (function($) {
 	$(document).ready(function(){
-		var animationStyleClasses = ["animated", "bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX", "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "hinge", "rollIn", "rollOut", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "zoomOut", "zoomOutDown", "zoomOutLeft", "zoomOutRight", "zoomOutUp"];
+		var animationStyleClasses = ["animated","infinite", "bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX", "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "hinge", "rollIn", "rollOut", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "zoomOut", "zoomOutDown", "zoomOutLeft", "zoomOutRight", "zoomOutUp"];
 		var delayClasses  = ["delay1", "delay2", "delay3", "delay4", "delay5", "delay6", "delay7", "delay8", "delay9", "delay10", "delay11", "delay12"];
+		var durationClasses  = ["duration1", "duration2", "duration3", "duration4", "duration5", "duration6", "duration7", "duration8", "duration9", "duration10", "duration11", "duration12", "duration13", "duration14", "duration15", "duration16", "duration17", "duration18", "duration19", "duration20"];
 		var scrollOffset = scroll_offset;		
 			
 		$('.eds-on-scroll').each(function(){
@@ -42,7 +43,8 @@
 					$.each(classList, function(index, value){
 						if((value=='eds-on-scroll') 
 							||	($.inArray(value, animationStyleClasses)!==-1) 
-							|| ($.inArray(value, delayClasses)!==-1))
+							|| ($.inArray(value, delayClasses)!==-1)
+							|| ($.inArray(value, durationClasses)!==-1))
 							removeClassList += " " + value;							
 					});
 					
@@ -58,7 +60,8 @@
 					var classList = className.trim().split(/\s+/);
 					$.each(classList, function(index, value){
 						if(($.inArray(value, animationStyleClasses)!==-1) 
-							|| ($.inArray(value, delayClasses)!==-1))
+							|| ($.inArray(value, delayClasses)!==-1)
+							|| ($.inArray(value, durationClasses)!==-1))
 							removeClassList += " " + value;							
 					});
 					
