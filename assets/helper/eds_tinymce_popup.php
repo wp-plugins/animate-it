@@ -17,7 +17,7 @@
 		<main class="site__content island" role="content">
 			<div class="wrap">			
 				<form name = "edsanimate_form" id = "edsanimate_form">
-					<table width="600" cellspacing="15" cellpadding="15">
+					<table width="570" cellspacing="15" cellpadding="15">
 					<tr>
 						<td>Animation Style: </td>
 						<td>
@@ -151,40 +151,6 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Duration (in seconds): </td>
-							<td colspan="2">
-								<select id="eds_duration" name="eds_duration" class = "input input--dropdown">
-									<option value="">None</option>
-									<option value="1">0.5 </option>
-							        <option value="2">1.0 </option>
-							        <option value="3">1.5 </option>
-							        <option value="4">2.0 </option>
-							        <option value="5">2.5 </option>
-							        <option value="6">3.0 </option>
-							        <option value="7">3.5 </option>
-							        <option value="8">4.0 </option>
-							        <option value="9">4.5 </option>
-							        <option value="10">5.0 </option>
-							        <option value="11">5.5 </option>
-							        <option value="12">6.0 </option>
-							        <option value="13">6.5 </option>
-							        <option value="14">7.0 </option>
-							        <option value="15">7.5 </option>
-							        <option value="16">8.0 </option>
-							        <option value="17">8.5 </option>
-							        <option value="18">9.0 </option>
-							        <option value="19">9.5 </option>
-							        <option value="20">10.0 </option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td>Animate Infinitely: </td>
-							<td colspan="2">
-								<input type="checkbox"  data-size="large" name="eds_infinite" data-on-text="Yes" data-off-text="No"> 
-							</td>
-						</tr>
-						<tr>
 							<td>Animate On Scroll: </td>
 							<td colspan="2">
 								<input type="checkbox"  data-size="large" name="eds_onscroll" data-on-text="Yes" data-off-text="No"> 
@@ -215,7 +181,6 @@
 		  };
 		
 		  $(document).ready(function(){
-		  $("input[name=eds_infinite]").bootstrapSwitch();
 		  $("input[name=eds_onscroll]").bootstrapSwitch();
 		    $('.js--triggerAnimation').click(function(e){
 		      e.preventDefault();
@@ -239,11 +204,6 @@
 				if( hForm.eds_delay.value!="")
 					shortCode +=  " delay=\"" + hForm.eds_delay.value + "\" ";
 
-				if( hForm.eds_duration.value!="")
-					shortCode +=  " duration=\"" + hForm.eds_duration.value + "\" ";
-
-				shortCode += ((hForm.eds_infinite.checked)?' infinite_animation="yes" ':' infinite_animation="no" ');
-				
 				shortCode += ((hForm.eds_onscroll.checked)?' on_scroll="yes"] ':' on_scroll="no"]');
 
 				shortCode += "<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3><p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>";

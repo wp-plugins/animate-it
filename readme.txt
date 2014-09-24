@@ -3,7 +3,7 @@ Contributors: eleopard
 Tags: css3 animation, animate.css, jquery, on scroll animation, delay animation
 Requires at least: 2.7
 Tested up to: 4.0
-Stable tag: 1.2
+Stable tag: 1.1
 License: GNU General Public License version 2 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -21,8 +21,6 @@ Some of the Key features Include:
 * Allowing user to apply CSS3 animations on WordPress Posts and Text Widgets
 * Capability to apply animation on Scroll
 * Provide special CSS delay classes to create a nice animation sequence with multiple text widgets and posts
-* Allow users to change animation duration.
-* Allow users to apply animation infinitely.
 * Options to enable or disable animations on Smartphones and Tablets. 
 
 All the CSS3 animations are from [Animate.css](http://daneden.github.io/animate.css/ "Animate.css")
@@ -56,9 +54,6 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 
 == Changelog ==
-
-= Version 1.2 =
-* New options added that will allow users to choose duration and infinite iteration while adding an animation in Pages, Post or Widget
 
 = Version 1.1 =
 * New options added under Settings-> Animate It! to enable or disable animations on Smartphones and Tablets.
