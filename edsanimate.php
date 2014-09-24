@@ -207,6 +207,8 @@ function edsanimate_handler( $attributes, $content = null ) {
 		extract( shortcode_atts( array(
 			'animation' => '',
 			'delay' => '',
+			'duration' => '',
+			'infinite_animation' =>'',
 			'on_scroll' => ''
 		), $attributes ) );
 		
@@ -220,9 +222,14 @@ function edsanimate_handler( $attributes, $content = null ) {
 		
 		$classString .= " " . $animation;
 	
+		if(strcasecmp($infinite_animation, 'yes')==0)
+			$classString .= " infinite";
+		
 		if($delay!= '' && is_int((int)$delay) && $delay>=0 && $delay <=12)
 			$classString .= " delay" . $delay;
 			
+		if($duration!= '' && is_int((int)$duration) && $duration>=0 && $duration <=12)
+			$classString .= " duration" . $duration;			
 		
 		if(strcasecmp($on_scroll, 'yes')==0)
 			$classString .= " eds-on-scroll";	
