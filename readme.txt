@@ -27,7 +27,7 @@ Some of the Key features Include:
 
 All the CSS3 animations are from [Animate.css](http://daneden.github.io/animate.css/ "Animate.css")
 
-[Demo](http://downloads.eleopard.in/animate-it-demo-wordpress/ "Demo") | [Support](http://downloads.eleopard.in/animate-it-support-wordpress/ "Support") | [Documentation](http://downloads.eleopard.in/animate-it-documentation-wordpress/ "Documentation")
+[Demo](http://downloads.eleopard.in/animate-it-demo-wordpress/ "Demo") | [Documentation](http://downloads.eleopard.in/animate-it-documentation-wordpress/ "Documentation")
 
 
 == Installation ==
