@@ -27,7 +27,7 @@
 	* For any other query please contact us at contact[at]eleopard[dot]in
 */
 
-if (!class_exists('Mobile_Detect')):
+if (!class_exists('EDS_Mobile_Detect')):
 	include_once 'assets/helper/Mobile_Detect.php';
 endif;
 
