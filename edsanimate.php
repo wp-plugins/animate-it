@@ -39,7 +39,7 @@ function detectDevice()
  	static $deviceType = null;
  	if(!$deviceType)
  	{
-		$detect = new Mobile_Detect;
+		$detect = new EDS_Mobile_Detect();
 		$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
  	}
  	return $deviceType;
