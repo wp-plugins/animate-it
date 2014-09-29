@@ -3,7 +3,7 @@ Contributors: eleopard
 Tags: css3 animation, animate.css, jquery, on scroll animation, delay animation
 Requires at least: 2.7
 Tested up to: 4.0
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GNU General Public License version 2 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -56,6 +56,9 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 
 == Changelog ==
+= Version 1.2.1 =
+* Resolved an issue related to multiple declaration of mobile_detect.php class.
+
 = Version 1.2 =
 * New options to add animation duration and infinite animation while applying an animation on WordPress Post, Page or widget.
 
