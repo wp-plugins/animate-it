@@ -56,6 +56,7 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 
 == Changelog ==
+
 = Version 1.2.1 =
 * Resolved an issue related to multiple declaration of mobile_detect.php class.
 
@@ -64,7 +65,6 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 = Version 1.1 =
 * New options added under Settings-> Animate It! to enable or disable animations on Smartphones and Tablets.
-
 
 = Version 1.0 =
 * Initial public release.
