@@ -181,13 +181,35 @@
 						<tr>
 							<td>Animate Infinitely: </td>
 							<td colspan="2">
-								<input type="checkbox"  data-size="large" name="eds_infinite" data-on-text="Yes" data-off-text="No"> 
+								<input type="checkbox"  data-size="large" name="eds_infinite" data-on-text="Yes" data-off-text="No" /> 
+							</td>
+						</tr>
+						<tr>						
+							<td style="text-align:left;">
+								<br/>
+								<b>Animate On:</b> 
+							</td>
+							<td colspan="2">
+								<br/>
+								<i>(Please select any one option)</i>								 
 							</td>
 						</tr>
 						<tr>
-							<td>Animate On Scroll: </td>
+							<td>Scroll: </td>
 							<td colspan="2">
-								<input type="checkbox"  data-size="large" name="eds_onscroll" data-on-text="Yes" data-off-text="No"> 
+								<input type="radio"  data-size="large" name="eds_animate_on" value="scroll" data-on-text="Yes" data-off-text="No" data-radio-all-off="true" />								 
+							</td>
+						</tr>
+						<tr>
+							<td>Click: </td>
+							<td colspan="2">
+								<input type="radio"  data-size="large" name="eds_animate_on" value="click" data-on-text="Yes" data-off-text="No" data-radio-all-off="true" />
+							</td>
+						</tr>
+						<tr>
+							<td>Hover: </td>
+							<td colspan="2">
+								<input type="radio"  data-size="large" name="eds_animate_on" value="hover" data-on-text="Yes" data-off-text="No" data-radio-all-off="true" /> 
 							</td>
 						</tr>
 						<tr>
@@ -216,7 +238,7 @@
 		
 		  $(document).ready(function(){
 		  $("input[name=eds_infinite]").bootstrapSwitch();
-		  $("input[name=eds_onscroll]").bootstrapSwitch();
+		  $("input[name=eds_animate_on]").bootstrapSwitch();
 		    $('.js--triggerAnimation').click(function(e){
 		      e.preventDefault();
 		      var anim = $('.js--animations').val();
@@ -235,6 +257,8 @@
 			{
 				var shortCode = "[edsanimate animation=\"";
 				var hForm = document.edsanimate_form;
+				var animate_on = "";
+				
 				shortCode += hForm.eds_style.value + "\" " ;
 				if( hForm.eds_delay.value!="")
 					shortCode +=  " delay=\"" + hForm.eds_delay.value + "\" ";
@@ -243,8 +267,13 @@
 					shortCode +=  " duration=\"" + hForm.eds_duration.value + "\" ";
 
 				shortCode += ((hForm.eds_infinite.checked)?' infinite_animation="yes" ':' infinite_animation="no" ');
-				
-				shortCode += ((hForm.eds_onscroll.checked)?' on_scroll="yes"] ':' on_scroll="no"]');
+
+				animate_on =  $('input[name=eds_animate_on]:radio:checked').val();
+
+				if(animate_on != null)
+					shortCode += ' animate_on="'+animate_on+'"] ';
+				else
+					shortCode += ' animate_on=""] ';					
 
 				shortCode += "<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3><p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>";
 

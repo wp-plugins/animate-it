@@ -3,7 +3,7 @@
  * Plugin Name: Animate It!
  * Plugin URI: http://www.eleopard.in
  * Description: It will allow user to add CSS Animations
- * Version: 1.2.1
+ * Version: 1.3
  * Author: eLEOPARD Design Studios
  * Author URI: http://www.eleopard.in
  * License: GNU General Public License version 2 or later; see LICENSE.txt
@@ -183,10 +183,12 @@ function add_eds_script_and_css()
 		wp_register_style( 'animate-css',plugins_url( '/assets/css/animate.css', __FILE__ ));
 		wp_register_script( 'viewpointcheck-script',plugins_url( '/assets/js/viewportchecker.js', __FILE__ ),array('jquery'));
 		wp_register_script( 'edsanimate-script', plugins_url( '/assets/js/edsanimate.js', __FILE__ ),array('viewpointcheck-script') );
-		wp_localize_script( 'edsanimate-script', 'scroll_offset', get_option('scroll_offset'));
+		$offset = array( 'offset' => get_option('scroll_offset'));
+		wp_localize_script( 'edsanimate-script', 'scroll_offset', $offset);		
 		wp_enqueue_style( 'animate-css' );	
 		wp_enqueue_script( 'viewpointcheck-script');		
 		wp_enqueue_script( 'edsanimate-script'); 
+		
 	endif; 
 }
 
@@ -211,7 +213,7 @@ function edsanimate_handler( $attributes, $content = null ) {
 			'delay' => '',
 			'duration' => '',
 			'infinite_animation' =>'',
-			'on_scroll' => ''
+			'animate_on' => ''
 		), $attributes ) );
 		
 		
@@ -233,8 +235,13 @@ function edsanimate_handler( $attributes, $content = null ) {
 		if($duration!= '' && is_int((int)$duration) && $duration>=0 && $duration <=12)
 			$classString .= " duration" . $duration;			
 		
-		if(strcasecmp($on_scroll, 'yes')==0)
+		if(strcasecmp($animate_on, 'scroll')==0)
 			$classString .= " eds-on-scroll";	
+		else if(strcasecmp($animate_on, 'click')==0)
+			$classString .= " eds-on-click";
+		else if(strcasecmp($animate_on, 'hover')==0)
+			$classString .= " eds-on-hover";
+			
 		
 		return '<div class="'.$classString.'">'.$content.'</div>';
 	else:
@@ -243,10 +250,52 @@ function edsanimate_handler( $attributes, $content = null ) {
 	
 }
 
+
+function eds_add_custom_class_field($t,$return,$instance){
+	$instance = wp_parse_args( (array) $instance, array( 'eds_animation_class' => '') );
+    if ( !isset($instance['eds_animation_class']) )
+        $instance['eds_animation_class'] = null;    
+    ?>
+    <p>
+    	<label for="<?php echo $t->get_field_id('eds_animation_class'); ?>">Aniamte It Classes</label>
+        <input type="text" name="<?php echo $t->get_field_name('eds_animation_class'); ?>" id="<?php echo $t->get_field_id('eds_animation_class'); ?>" value="<?php echo $instance['eds_animation_class'];?>" />         
+    </p>   
+    <?php
+    $retrun = null;
+    return array($t,$return,$instance);
+	
+}
+
+
+function eds_update_widget_animation_class($instance, $new_instance, $old_instance){
+	$instance = $old_instance;
+	  $instance['eds_animation_class'] = $new_instance['eds_animation_class'];
+	return $instance;
+}
+
+function eds_add_widget_animation_class($params){
+	global $wp_registered_widgets;
+    $widget_id = $params[0]['widget_id'];
+    $widget_obj = $wp_registered_widgets[$widget_id];
+    $widget_opt = get_option($widget_obj['callback'][0]->option_name);
+    $widget_num = $widget_obj['params'][0]['number'];
+    if (isset($widget_opt[$widget_num]['eds_animation_class'])){
+    	$eds_animation_class = $widget_opt[$widget_num]['eds_animation_class'];
+    	$params[0]['before_widget'] = preg_replace('/class="/', 'class=" '.$eds_animation_class ,  $params[0]['before_widget'], 1);
+    }
+	return $params;
+}
+
 //Admin Menu Options Filters 
+
 add_filter('widget_text', 'do_shortcode');
 register_activation_hook(__FILE__, 'set_edsanimate_options');
 register_deactivation_hook(__FILE__, 'unset_edsanimate_options');
+
+add_action('in_widget_form', 'eds_add_custom_class_field',5,3);
+add_filter('widget_update_callback', 'eds_update_widget_animation_class',5,3);
+add_filter('dynamic_sidebar_params', 'eds_add_widget_animation_class');
+
 add_action('admin_menu', 'modify_menu');
 add_shortcode('edsanimate', 'edsanimate_handler');
 add_action('wp_enqueue_scripts', 'add_eds_script_and_css');
