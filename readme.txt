@@ -56,7 +56,7 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 2. **Select Animation** - After clicking Animate It! button you will get a screen to choose animation.
 3. **Animation Block** - Update the content of the block as per your requirement. You can copy and paste the same in Text Widget also.
 4. **Settings** - Options for Animate It! under Settings-> Animate It! menu in the admin area.
-5. **Class Generator** - Class Generator to generate required Animation Classes.
+5. **Class Generator** - Class Generator to generate required Animation Classes for Widgets.
 6. **Copy Generated Classes** - Copy the generated classes.
 7. **Apply on Widgets** - Apply the copied classes by pasting it in the 'Animate It! Classes' text box under the widget settings.
 
