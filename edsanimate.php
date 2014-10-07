@@ -3,7 +3,7 @@
  * Plugin Name: Animate It!
  * Plugin URI: http://www.eleopard.in
  * Description: It will allow user to add CSS Animations
- * Version: 1.3
+ * Version: 1.3.1
  * Author: eLEOPARD Design Studios
  * Author URI: http://www.eleopard.in
  * License: GNU General Public License version 2 or later; see LICENSE.txt
@@ -268,8 +268,7 @@ function eds_add_custom_class_field($t,$return,$instance){
 
 
 function eds_update_widget_animation_class($instance, $new_instance, $old_instance){
-	$instance = $old_instance;
-	  $instance['eds_animation_class'] = $new_instance['eds_animation_class'];
+	$instance['eds_animation_class'] = $new_instance['eds_animation_class'];
 	return $instance;
 }
 
