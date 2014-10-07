@@ -106,13 +106,21 @@
 				return removeClassList;					
 			});		
 			
+			var hovered = false;
 			$module.hover(
 				function (){
+					hovered = true;
 					 $(this).removeClass(classesToAdd).addClass(classesToAdd).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 					      $(this).removeClass(classesToAdd);
 					 });	
 				},
-				function (){					
+				function (){		
+					hovered = false;
+					 $(this).on('webkitAnimationIteration oanimationiteration msAnimationiteration animationiteration', function(e){
+						if(!hovered){ 
+							$(this).removeClass(classesToAdd);
+						}
+					 });
 				}
 			);					
 	

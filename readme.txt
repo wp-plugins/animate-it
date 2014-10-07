@@ -3,7 +3,7 @@ Contributors: eleopard
 Tags: css3 animation, animate.css, jquery, on scroll animation, delay animation
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GNU General Public License version 2 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -63,6 +63,10 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 
 == Changelog ==
+
+= Version 1.3.2 =
+* Resolved issue related to infinite animation and on hover combination.
+
 
 = Version 1.3.1 =
 * Resolved issue related to widget content update and save. 
