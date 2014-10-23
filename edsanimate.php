@@ -3,7 +3,7 @@
  * Plugin Name: Animate It!
  * Plugin URI: http://www.eleopard.in
  * Description: It will allow user to add CSS Animations
- * Version: 1.3.2
+ * Version: 1.3.3
  * Author: eLEOPARD Design Studios
  * Author URI: http://www.eleopard.in
  * License: GNU General Public License version 2 or later; see LICENSE.txt
@@ -243,9 +243,9 @@ function edsanimate_handler( $attributes, $content = null ) {
 			$classString .= " eds-on-hover";
 			
 		
-		return '<div class="'.$classString.'">'.$content.'</div>';
+		return '<div class="'.$classString.'">'.do_shortcode($content).'</div>';
 	else:
-		return $content;
+		return do_shortcode($content);
 	endif;		
 	
 }
