@@ -2,7 +2,7 @@
 Contributors: eleopard
 Tags: css3 animation, animate.css, jquery, on scroll animation, delay animation
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.1.1
 Stable tag: 1.4.0
 License: GNU General Public License version 2 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
