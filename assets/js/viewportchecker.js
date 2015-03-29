@@ -20,14 +20,20 @@
 
             $elem.each(function(){
                 var $obj = $(this);
+                var scroll_offset = $obj.attr('eds_scroll_offset');
                 
                 if ($obj.hasClass(options.classToAdd)){
                     return;
                 }
 
-                
-                var elemTop = Math.round( $obj.offset().top ) + Math.round(options.offset * $obj.height() * 0.01),
-                    elemBottom = elemTop + ($obj.height());
+                var elemTop = '';
+                if(scroll_offset != null && scroll_offset != ''){
+                	elemTop = Math.round( $obj.offset().top ) + Math.round(Number(scroll_offset) * $obj.height() * 0.01),
+                    	elemBottom = elemTop + ($obj.height());
+                }else{
+                	elemTop = Math.round( $obj.offset().top ) + Math.round(options.offset * $obj.height() * 0.01),
+                	elemBottom = elemTop + ($obj.height());
+                }
 
                 // Add class if in viewport
                 if ((elemTop < viewportBottom) && (elemBottom > viewportTop)){
@@ -38,7 +44,6 @@
                 }
             });
         };
-
         
         $(window).scroll(this.checkElements);
         this.checkElements();

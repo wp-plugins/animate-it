@@ -3,7 +3,7 @@ Contributors: eleopard
 Tags: css3 animation, animate.css, jquery, on scroll animation, delay animation
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.3.3
+Stable tag: 1.4.0
 License: GNU General Public License version 2 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -21,6 +21,7 @@ Some of the Key features Include:
 * Allowing user to apply CSS3 animations on WordPress Posts and Text Widgets
 * 50+ Entry, Exit and Attention Seeker Animations
 * Capability to apply animation on Scroll
+* Capability to add different scroll offset on individual animation blocks
 * Capability to apply animation on Hover
 * Capability to apply animation on Click
 * Provide special CSS delay classes to create a nice animation sequence on pages and posts
@@ -63,6 +64,10 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 
 == Changelog ==
+
+= Version 1.4.0 =
+* Resolved issue related to CSS.
+* New feature that will allow user to add different scroll offset on individual animation blocks.
 
 = Version 1.3.3 =
 * Resolved issue related to nested shortcodes.

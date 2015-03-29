@@ -12,10 +12,6 @@
 }
 
 input, select, button, textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-
   font: inherit;
   font-size: 16px !important;
   color: inherit;
@@ -90,9 +86,7 @@ input, select, button, textarea {
   border: 1px solid #c0c8c9;
 }
 
-  .input--dropdown {
-    background-image: url("images/ddown.png");
-    background-image: url("images/ddown.svg?3"), none;
+  .input--dropdown {    
     background-repeat: no-repeat;
     background-size: 1.5rem 1rem;
     background-position: right center;
