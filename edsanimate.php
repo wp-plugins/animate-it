@@ -3,7 +3,7 @@
  * Plugin Name: Animate It!
  * Plugin URI: http://www.eleopard.in
  * Description: It will allow user to add CSS Animations
- * Version: 1.4.1
+ * Version: 1.4.2
  * Author: eLEOPARD Design Studios
  * Author URI: http://www.eleopard.in
  * License: GNU General Public License version 2 or later; see LICENSE.txt
@@ -59,12 +59,17 @@ function set_edsanimate_options(){
 	add_option('enable_on_tab'
 			,'1'
 			,'Animation should work on tablets or not.');
+	
+	add_option('custom_css'
+			,''
+			,'Custom CSS classes for additional functionality.');
 }
 
 function unset_edsanimate_options(){
 	delete_option('scroll_offset');
 	delete_option('enable_on_phone');
 	delete_option('enable_on_tab');
+	delete_option('custom_css');
 }
 	
 function admin_edsanimate_options(){
@@ -87,9 +92,9 @@ function update_edsanimate_options(){
 		update_option('scroll_offset', $_REQUEST['scroll_offset']);
 		update_option('enable_on_phone', $_REQUEST['enable_on_phone']);
 		update_option('enable_on_tab', $_REQUEST['enable_on_tab']);
-		
 		$ok=true;	
 	}
+	update_option('custom_css', esc_textarea(isset($_REQUEST['custom_css'])?$_REQUEST['custom_css']:''));
 	
 		
 	if($ok){?>
@@ -112,7 +117,7 @@ function print_edsanimate_form(){
 	<form method="post">
 		<table cellspacing="10" cellpadding="10">
 			<tr>
-				<td>
+				<td style="vertical-align: top;">
 					<label for="scroll_offset">Scroll Offset (in percentage):</label>
 				</td>
 				<td colspan="2">
@@ -121,7 +126,7 @@ function print_edsanimate_form(){
 				
 			</tr>
 			<tr>
-				<td>
+				<td style="vertical-align: top;">
 					<label for="enable_on_phone">Enable on Smartphones:</label>
 				</td>
 				<td>
@@ -130,12 +135,12 @@ function print_edsanimate_form(){
 						<option value="1" <?php echo (get_option('enable_on_phone')=='1')?'selected="selected"':'';?>>Yes</option>				
 					</select>	
 				</td>
-				<td>
+				<td style="vertical-align: top;">
 					<p style="font-size:11px;"><i>(Animation should work on Smartphones or not)</i>
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td style="vertical-align: top;">
 					<label for="enable_on_tab">Enable on Tablets:</label>					
 				</td>
 				<td>
@@ -144,8 +149,19 @@ function print_edsanimate_form(){
 						<option value="1" <?php echo (get_option('enable_on_tab')=='1')?'selected="selected"':'';?>>Yes</option>				
 					</select>
 				</td>
-				<td>
+				<td style="vertical-align: top;">
 					<p style="font-size:11px;"><i>(Animation should work on Tablets or not)</i>
+				</td>
+			</tr>
+			<tr>
+				<td style="vertical-align: top;">
+					<label for="custom_css">Custom CSS:</label>					
+				</td>
+				<td>
+					<textarea name="custom_css" id="custom_css" cols="25" rows="10"><?php echo get_option('custom_css');?></textarea>					
+				</td>
+				<td style="vertical-align: top;">
+					<p style="font-size:11px;"><i>(Add custom CSS classes)</i>
 				</td>
 			</tr>
 			<tr>
@@ -181,14 +197,22 @@ function add_eds_script_and_css()
 	
 	if($enable):		
 		wp_register_style( 'animate-css',plugins_url( '/assets/css/animate.css', __FILE__ ));
+		
+		//Custom CSS//
+		$custom_css = get_option('custom_css');
+		
 		wp_register_script( 'viewpointcheck-script',plugins_url( '/assets/js/viewportchecker.js', __FILE__ ),array('jquery'));
 		wp_register_script( 'edsanimate-script', plugins_url( '/assets/js/edsanimate.js', __FILE__ ),array('viewpointcheck-script') );
 		$offset = array( 'offset' => get_option('scroll_offset'));
-		wp_localize_script( 'edsanimate-script', 'scroll_offset', $offset);		
-		wp_enqueue_style( 'animate-css' );	
-		wp_enqueue_script( 'viewpointcheck-script');		
-		wp_enqueue_script( 'edsanimate-script'); 
+		wp_localize_script( 'edsanimate-script', 'scroll_offset', $offset);
 		
+		//Enqueuing style sheets 
+		wp_enqueue_style( 'animate-css' );
+		wp_add_inline_style( 'animate-css', $custom_css );
+			
+		//Enqueuing javascripts
+		wp_enqueue_script( 'viewpointcheck-script');		
+		wp_enqueue_script( 'edsanimate-script');		
 	endif; 
 }
 
@@ -222,7 +246,7 @@ function edsanimate_handler( $attributes, $content = null ) {
 		
 		if($animation == '')
 		{		
-			return $content; 
+			return do_shortcode($content); 
 		}
 		
 		$classString .= " " . $animation;
@@ -230,10 +254,10 @@ function edsanimate_handler( $attributes, $content = null ) {
 		if(strcasecmp($infinite_animation, 'yes')==0)
 			$classString .= " infinite";
 		
-		if($delay!= '' && is_int((int)$delay) && $delay>=0 && $delay <=12)
+		if($delay!= '' && is_int((int)$delay) && $delay>=0)
 			$classString .= " delay" . $delay;
 			
-		if($duration!= '' && is_int((int)$duration) && $duration>=0 && $duration <=12)
+		if($duration!= '' && is_int((int)$duration) && $duration>=0)
 			$classString .= " duration" . $duration;			
 		
 		if(strcasecmp($animate_on, 'scroll')==0)

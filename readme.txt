@@ -1,9 +1,9 @@
 === Animate It! ===
 Contributors: eleopard
 Tags: css3 animation, animate.css, jquery, on scroll animation, delay animation
-Requires at least: 3.0
+Requires at least: 3.3
 Tested up to: 4.1.1
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GNU General Public License version 2 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -28,6 +28,7 @@ Some of the Key features Include:
 * Allow user to add animation duration
 * Allow user to apply animation infinitely
 * Options to enable or disable animations on Smartphones and Tablets. 
+* Feature to add custom CSS class for additional delay, duration etc.
 * Allow users to apply animation on WordPress Widgets. Use <a href="http://downloads.eleopard.in/class-generator-wordpress/" target="_blank">Class Generator</a> to generate the required animation classes.
 
 All the CSS3 animations are from [Animate.css](http://daneden.github.io/animate.css/ "Animate.css")
@@ -64,6 +65,9 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 
 == Changelog ==
+
+= Version 1.4.2 =
+* New Feature that will allow user to add custom CSS for additional delay, duration etc.
 
 = Version 1.4.1 =
 * Resolved bug related to nested shortcodes.
