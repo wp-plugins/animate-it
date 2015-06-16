@@ -3,7 +3,7 @@
  * Plugin Name: Animate It!
  * Plugin URI: http://www.eleopard.in
  * Description: It will allow user to add CSS Animations
- * Version: 1.4.2
+ * Version: 1.4.3
  * Author: eLEOPARD Design Studios
  * Author URI: http://www.eleopard.in
  * License: GNU General Public License version 2 or later; see LICENSE.txt
@@ -285,7 +285,7 @@ function eds_add_custom_class_field($t,$return,$instance){
         $instance['eds_animation_class'] = null;    
     ?>
     <p>
-    	<label for="<?php echo $t->get_field_id('eds_animation_class'); ?>">Aniamte It Classes</label>
+    	<label for="<?php echo $t->get_field_id('eds_animation_class'); ?>">Animate It Classes</label>
         <input type="text" name="<?php echo $t->get_field_name('eds_animation_class'); ?>" id="<?php echo $t->get_field_id('eds_animation_class'); ?>" value="<?php echo $instance['eds_animation_class'];?>" />         
     </p>   
     <?php
