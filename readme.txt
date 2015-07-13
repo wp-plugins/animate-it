@@ -3,7 +3,7 @@ Contributors: eleopard
 Tags: css3 animation, animate.css, jquery, on scroll animation, delay animation
 Requires at least: 3.3
 Tested up to: 4.1.1
-Stable tag: 1.4.3
+Stable tag: 1.4.4
 License: GNU General Public License version 2 or later
 License URI: http://www.gnu.org/copyleft/gpl.html
 
@@ -65,6 +65,9 @@ Percentage scroll offset can be set from Settings-> Animate It! menu in the admi
 
 
 == Changelog ==
+
+= Version 1.4.4 =
+* Bug fix related to the addition of animation classes on widgets
 
 = Version 1.4.3 =
 * Some spelling correction.
